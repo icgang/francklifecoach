@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franck Mkandala — Speaker | Author | Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --dark: #0D0D0D;
+      --dark-2: #161616;
+      --dark-3: #1F1F1F;
+      --text: #E8E3D9;
+      --muted: #8A8070;
+      --white: #FAFAF7;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(13, 13, 13, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 10px 24px;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-light);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 60px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201, 168, 76, 0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201, 168, 76, 0.04) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(201, 168, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 168, 76, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 700px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 28px;
+      color: var(--white);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 16px 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      color: var(--gold);
+      padding: 16px 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      background: rgba(201, 168, 76, 0.07);
+    }
+
+    .hero-photo {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  bottom: 0;
+  width: 42%;
+
+  background: url('./images/hero.png') center/cover no-repeat;
+  opacity: 1;
+}
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 120px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: grayscale(30%);
+    }
+
+    .about-img-accent {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--gold);
+      border-radius: 2px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--gold);
+      color: var(--dark);
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    .about-badge strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .about-badge span {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .about-text {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .roles {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .role-chip {
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      color: var(--gold);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── SERVICES ── */
+    .services {
+      background: var(--dark-2);
+      padding: 120px 60px;
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 70px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--dark-3);
+      padding: 48px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: rgba(201, 168, 76, 0.08);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.92rem;
+    }
+
+    /* ── BOOKS ── */
+    .books {
+      padding: 120px 60px;
+    }
+
+    .books-header {
+      max-width: 600px;
+      margin-bottom: 60px;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .book-card {
+      background: var(--dark-2);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .book-cover {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-style: italic;
+      text-align: center;
+      padding: 24px;
+      color: var(--dark);
+      position: relative;
+    }
+
+    .book-cover-1 {
+      background: linear-gradient(135deg, #C9A84C, #8B6914);
+    }
+
+    .book-cover-2 {
+      background: linear-gradient(135deg, #2C4A7C, #1a2d4a);
+      color: var(--gold-light);
+    }
+
+    .book-cover-3 {
+      background: linear-gradient(135deg, #4A2C2C, #2d1a1a);
+      color: var(--gold-light);
+    }
+
+    .book-info {
+      padding: 24px;
+    }
+
+    .book-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .book-info p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .book-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .book-link::after {
+      content: '→';
+      transition: transform 0.2s;
+    }
+
+    .book-link:hover::after {
+      transform: translateX(4px);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      background: var(--dark-2);
+      padding: 120px 60px;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: var(--dark);
+      padding: 36px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .testi-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testi-author {
+      font-size: 0.8rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .testi-role {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── EVENTS ── */
+    .events {
+      padding: 120px 60px;
+    }
+
+    .events-header {
+      max-width: 600px;
+      margin-bottom: 60px;
+    }
+
+    .event-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .event-item {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 32px;
+      background: var(--dark-2);
+      padding: 28px 36px;
+      transition: background 0.2s;
+    }
+
+    .event-item:hover {
+      background: var(--dark-3);
+    }
+
+    .event-date {
+      text-align: center;
+    }
+
+    .event-date .month {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .event-date .day {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .event-title {
+      font-size: 1rem;
+      color: var(--white);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .event-loc {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .event-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      color: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 120px 60px;
+      background: var(--dark-2);
+      text-align: center;
+    }
+
+    .contact h2 {
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .contact-form {
+      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    input,
+    textarea,
+    select {
+      background: var(--dark);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      color: var(--text);
+      padding: 14px 18px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      border-radius: 2px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content>* {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-tag {
+      animation-delay: 0.1s;
+    }
+
+    .hero h1 {
+      animation-delay: 0.25s;
+    }
+
+    .hero-sub {
+      animation-delay: 0.4s;
+    }
+
+    .hero-btns {
+      animation-delay: 0.55s;
+    }
+
+    .hero-stats {
+      animation-delay: 0.7s;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      nav {
+        padding: 16px 24px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 100px 24px 60px;
+      }
+
+      .hero-photo {
+        display: none;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        padding: 80px 24px;
+      }
+
+      .services {
+        padding: 80px 24px;
+      }
+
+      .services-grid,
+      .books-grid,
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .books,
+      .events,
+      .testimonials,
+      .contact {
+        padding: 80px 24px;
+      }
+
+      .event-item {
+        grid-template-columns: 60px 1fr;
+      }
+
+      .event-tag {
+        display: none;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 40px 24px;
+      }
+
+      .hero-stats {
+        gap: 28px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">Franck Mkandala</a>
+    <ul class="nav-links">
+      <li><a href="#about">Kuhusu</a></li>
+      <li><a href="#services">Huduma</a></li>
+      <li><a href="#books">Vitabu</a></li>
+      <li><a href="#events">Matukio</a></li>
+      <li><a href="#contact">Wasiliana</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Omba Semina</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Mzungumzaji · Mwandishi · Kiongozi</div>
+      <h1>Badilisha<br><em>Maisha Yako</em><br>Leo.</h1>
+      <p class="hero-sub">Mhadhiri wa kimataifa, mwandishi wa vitabu vya bestseller, na mshauri wa maendeleo ya binafsi
+        anayekusaidia kufikia uwezo wako kamili.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Omba Semina</a>
+        <a href="#books" class="btn-outline">Soma Vitabu</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Semina Zilizofanywa</div>
+        </div>
+        <div>
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">Maisha Yaliyoguswa</div>
+        </div>
+        <div>
+          <div class="stat-num">12</div>
+          <div class="stat-label">Vitabu Vilivyochapishwa</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-img-wrap">
+     <img class="about-img" src="./images/hero1.png" alt="Franck Mkandala Portrait">
+      <div class="about-img-accent"></div>
+      <div class="about-badge">
+        <strong>15+</strong>
+        <span>Miaka ya Uzoefu</span>
+      </div>
+    </div>
+    <div class="about-text-content">
+      <div class="section-tag">Kuhusu Franck Mkandala</div>
+      <h2>Sauti Inayobadilisha <em>Mataifa</em></h2>
+      <p class="about-text">Franck Mkandala ni msemaji wa nguvu, mwandishi maarufu, na mwalimu wa maisha aliyesaidia
+        maelfu ya watu katika Afrika na duniani kote kugundua dira yao, kukuza uwezo wao, na kujenga mustakabali wao.
+      </p>
+      <p class="about-text">Kupitia vitabu, semina, na mafunzo ya kibinafsi, Franck Mkandala anafungua milango ya
+        mafanikio kwa wote wanaothubutu kuamini ndoto zao.</p>
+      <div class="roles">
+        <span class="role-chip">Public Speaker</span>
+        <span class="role-chip">Book Author</span>
+        <span class="role-chip">Life Coach</span>
+        <span class="role-chip">Business Mentor</span>
+        <span class="role-chip">Leadership Trainer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <div class="section-tag">Huduma</div>
+      <h2>Jinsi Ninavyoweza <em>Kukusaidia</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon">🎤</div>
+        <h3>Public Speaking</h3>
+        <p>Hotuba za kutia moyo katika mikutano, sherehe za kampuni, vyuo vikuu, na matukio ya serikali. Kila hotuba
+          inabuni mabadiliko ya kweli.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon">📚</div>
+        <h3>Uandishi & Vitabu</h3>
+        <p>Vitabu vya maendeleo ya binafsi, biashara, na uongozi. Unaweza pia kupata ushauri wa kuandika kitabu chako
+          mwenyewe.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon">🎯</div>
+        <h3>Leadership Training</h3>
+        <p>Mafunzo ya timu na viongozi wa kampuni ili kuimarisha utamaduni wa mafanikio, mawasiliano, na tija mahali pa
+          kazi.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon">🧠</div>
+        <h3>Life Coaching</h3>
+        <p>Vikao vya moja kwa moja au kikundi vinavyokusaidia kutambua nguvu zako, kufuta vikwazo, na kuunda mipango ya
+          mafanikio.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-icon">💼</div>
+        <h3>Business Mentorship</h3>
+        <p>Mwongozo wa vitendo kwa wajasiriamali wanaoanzisha au kukua biashara — kutoka wazo hadi biashara
+          inayofanikiwa.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-icon">🌍</div>
+        <h3>Corporate Seminars</h3>
+        <p>Semina za siku moja au wiki nzima zinazobadilisha utamaduni wa taasisi na kuongeza tija ya wafanyakazi wote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section class="books" id="books">
+    <div class="books-header">
+      <div class="section-tag">Vitabu</div>
+      <h2>Maneno Yanayobadilisha <em>Dunia</em></h2>
+    </div>
+    <div class="books-grid">
+      <div class="book-card">
+        <div class="book-cover book-cover-1">Nguvu ya<br>Ndani Yako</div>
+        <div class="book-info">
+          <h4>Nguvu ya Ndani Yako</h4>
+          <p>Gundua uwezo usiojulikana ndani yako na uanze safari ya mafanikio ya kweli.</p>
+          <a href="#" class="book-link">Nunua Sasa</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-cover-2">Kiongozi wa<br>Kesho</div>
+        <div class="book-info">
+          <h4>Kiongozi wa Kesho</h4>
+          <p>Mwongozo wa kina wa kuwa kiongozi anayeathiri, anayejenga, na anayeacha urithi.</p>
+          <a href="#" class="book-link">Nunua Sasa</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-cover-3">Biashara<br>Bila Mipaka</div>
+        <div class="book-info">
+          <h4>Biashara Bila Mipaka</h4>
+          <p>Jinsi ya kujenga biashara inayokua, inayodumu, na inayobadilisha maisha ya wengine.</p>
+          <a href="#" class="book-link">Nunua Sasa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-header">
+      <div class="section-tag" style="justify-content:center">Ushuhuda</div>
+      <h2>Wanachosema <em>Watu</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-text">"Semina ya Franck Mkandala ilibadilisha kabisa jinsi ninavyoona biashara na maisha yangu.
+          Miezi 6 baadaye, mapato yangu yameongezeka maradufu."</p>
+        <div class="testi-author">Amina J.</div>
+        <div class="testi-role">CEO, Kampuni ya Teknolojia, Dar es Salaam</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">"Kitabu 'Nguvu ya Ndani Yako' kilisaidia timu yangu yote. Tulinunua nakala 200 na tija
+          yetu imeongezeka ajabu."</p>
+        <div class="testi-author">Robert M.</div>
+        <div class="testi-role">HR Director, Benki ya Kitaifa</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">"Franck Mkandala ni msemaji wa pekee ninayemwona akifanya watu wakumbuke kila neno
+          alillosema. Mkutano wetu ulikuwa mzuri sana."</p>
+        <div class="testi-author">Dr. Grace K.</div>
+        <div class="testi-role">Mkurugenzi, Chuo Kikuu cha Nairobi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events" id="events">
+    <div class="events-header">
+      <div class="section-tag">Matukio</div>
+      <h2>Matukio Yanayokuja <em>Hivi Karibuni</em></h2>
+    </div>
+    <div class="event-list">
+      <div class="event-item">
+        <div class="event-date">
+          <div class="month">Jul</div>
+          <div class="day">12</div>
+        </div>
+        <div>
+          <div class="event-title">Semina ya Uongozi — Dar es Salaam</div>
+          <div class="event-loc">📍 Hyatt Regency, Dar es Salaam, Tanzania</div>
+        </div>
+        <span class="event-tag">Semina</span>
+      </div>
+      <div class="event-item">
+        <div class="event-date">
+          <div class="month">Aug</div>
+          <div class="day">03</div>
+        </div>
+        <div>
+          <div class="event-title">Kongamano la Biashara — Nairobi</div>
+          <div class="event-loc">📍 KICC, Nairobi, Kenya</div>
+        </div>
+        <span class="event-tag">Kongamano</span>
+      </div>
+      <div class="event-item">
+        <div class="event-date">
+          <div class="month">Sep</div>
+          <div class="day">20</div>
+        </div>
+        <div>
+          <div class="event-title">Life Coaching Bootcamp — Online</div>
+          <div class="event-loc">📍 Mtandaoni · Zoom Live</div>
+        </div>
+        <span class="event-tag">Mtandaoni</span>
+      </div>
+      <div class="event-item">
+        <div class="event-date">
+          <div class="month">Oct</div>
+          <div class="day">08</div>
+        </div>
+        <div>
+          <div class="event-title">Women in Leadership Summit — Kampala</div>
+          <div class="event-loc">📍 Serena Hotel, Kampala, Uganda</div>
+        </div>
+        <span class="event-tag">Summit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-tag" style="justify-content:center">Wasiliana</div>
+    <h2>Anza Safari Yako ya <em>Mabadiliko</em></h2>
+    <p>Tuma ujumbe leo ili tuanze mazungumzo kuhusu jinsi Franck Mkandala anavyoweza kutoa thamani kwa taasisi yako,
+      timu, au maisha yako.</p>
+    <div class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="Jina lako kamili">
+        <input type="email" placeholder="Barua pepe yako">
+      </div>
+      <input type="text" placeholder="Kampuni / Taasisi (hiari)">
+      <select>
+        <option value="" disabled selected style="color:#8A8070">Aina ya Huduma Unayohitaji</option>
+        <option>Public Speaking / Hotuba</option>
+        <option>Corporate Seminar</option>
+        <option>Life Coaching</option>
+        <option>Business Mentorship</option>
+        <option>Leadership Training</option>
+        <option>Kitabu / Uandishi</option>
+      </select>
+      <textarea placeholder="Eleza kwa ufupi unachohitaji au tukio lako..."></textarea>
+      <button class="btn-primary" onclick="alert('Asante! Tutawasiliana nawe hivi karibuni.')">Tuma Ombi →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Franck Mkandala</div>
+    <div class="footer-copy">© 2026 Franck Mkandala. Haki zote zimehifadhiwa.</div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

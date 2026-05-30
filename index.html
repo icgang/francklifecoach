@@ -1115,9 +1115,16 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Franck Mkandala</div>
-    <div class="footer-copy">© 2026 Franck Mkandala. Haki zote zimehifadhiwa.<br> <br>
-        <p> Imeandaliwa na <a href="https://icgangroyalorg.co.tz"></a> ICGANG ROYAL'S TECHNOLOGIES LIMITED </p>
-    </div>
+    <div class="footer-copy">
+  © <span id="year"></span> Franck Mkandala. Haki zote zimehifadhiwa.
+  <br><br>
+  <p>
+    Imeandaliwa na 
+    <a href="https://icgangroyalorg.co.tz" target="_blank">
+      ICGANG ROYAL'S TECHNOLOGIES LIMITED
+    </a>
+  </p>
+</div>
 
     <div class="footer-links">
       <a href="#">Instagram</a>
@@ -1128,5 +1135,7 @@
   </footer>
 
 </body>
-
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </html>
